@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx-env-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vampolo/nginx-env-proxy
+    ports:
+      - 8080:80
+    environment:
+      - PROXIES=/bla/bla->http://google.com
